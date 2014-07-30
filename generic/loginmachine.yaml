@@ -1,0 +1,41 @@
+---
+alces_stack::networkinterfaces:
+ - eth0
+ - eth1
+ - bmc
+#alces_stack::networkrole_em1: bond0
+alces_stack::networkrole_bmc: bmc
+#alces_stack::networkrole_ib0: infiniband
+#alces_stack::networkrole_p2p1: bond0
+alces_stack::networkrole_eth0: private
+alces_stack::networkrole_eth1: public
+alces_stack::defaultgateway_role: private
+alcesbase::serialconsoledevice: "/dev/ttyS1"
+alcesbase::serialconsolebaud: "115200"
+alces_stack::infiniband: false
+alces_stack::melanox: false
+alces_stack::qlogic: false
+alces_stack::profile::vgl: false
+alces_stack::rootloginnopassword: true
+alces_stack::profile::lustrenetworks: 'tcp0(eth0)'
+#alces_stack::bonds:
+# - bond0
+#alces_stack::bond0_type: 1
+#alces_stack::bond0_options: 'miimon=80 primary=p2p1'
+alces_stack::profile::fsimports:
+ 'headnode:/users':
+   target: '/users'
+   options: intr,rsize=32768,wsize=32768,_netdev
+ 'headnode:/opt/apps':
+   target: '/opt/apps'
+   options: intr,rsize=32768,wsize=32768,_netdev
+ 'service:/opt/alces':
+   target: '/opt/alces'
+   options: intr,rsize=32768,wsize=32768,_netdev
+ 'service:/opt/gridware':
+   target: '/opt/gridware'
+   options: intr,rsize=32768,wsize=32768,_netdev
+ 'headnode:/opt/service':
+   target: '/opt/service'
+   options: intr,rsize=32768,wsize=32768,_netdev
+alces_stack::profile::krb: false

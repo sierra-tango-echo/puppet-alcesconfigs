@@ -1,0 +1,9 @@
+---
+alces_stack::private_ip: "10.199.0.1"
+alces_stack::bmc_ip: "10.11.1.1"
+alces_stack::infiniband_ip: "10.199.128.1"
+alces_stack::management_ip: "10.199.64.1"
+alces_stack::public_ip: "137.73.113.220"
+alcesbase::nvidia: false
+alces_stack::private_dhcp: false
+#alces_stack::public_dhcp: true

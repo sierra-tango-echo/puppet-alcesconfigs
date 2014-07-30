@@ -1,0 +1,25 @@
+---
+alces_stack::profile::reposource: download
+alces_stack::gmetad: true
+alces_stack::cobbler: true
+alces_stack::nagios: true
+alces_stack::httpd: true
+alces_stack::named: true
+alces_stack::profile::fsexports:
+ clusterware:
+  path: '/opt/alces'
+  nfsexportoptions: ro,no_root_squash,no_subtree_check,async
+ gridware:
+  path: '/opt/gridware'
+  nfsexportoptions: rw,no_root_squash,no_subtree_check,sync
+ diskless:
+  path: '/var/lib/oneSIS/images/'
+  nfsexportoptions: ro,no_root_squash,no_subtree_check,async
+  parents:
+   - /var/lib/oneSIS
+ home:
+   path: '/users' 
+   nfsexportoptions: rw,no_root_squash,no_subtree_check,sync
+ service:
+   path: '/opt/service'
+   nfsexportoptions: ro,no_root_squash,no_subtree_check,sync

@@ -1,0 +1,25 @@
+---
+alces_stack::networkinterfaces:
+ - eth0
+ - eth1
+ - eth2
+# - bmc
+alces_stack::networkrole_eth0: private
+#alces_stack::networkrole_bmc: bmc
+#alces_stack::networkrole_ib0: infiniband
+alces_stack::networkrole_eth1: management
+alces_stack::networkrole_eth2: public
+alces_stack::defaultgateway_role: external
+alces_stack::infiniband: false
+alces_stack::lustre: false
+alcesbase::serialconsoledevice: "/dev/ttyS1"
+alcesbase::serialconsolebaud: "115200"
+alces_stack::profile::krb: false
+alces_stack::schedulerrole: slave
+# BONDS
+#alces_stack::bonds:
+# - bond0
+# Options for bond0
+#alces_stack::bond0_type: 1
+#alces_stack::bond0_options: 'primary=em2'
+#alces_stack::gangliaport: 8649

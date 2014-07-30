@@ -1,0 +1,12 @@
+---
+alces_stack::public_ip: "137.73.113.223"
+alces_stack::private_dhcp: false
+alces_stack::public_dhcp: false
+alces_stack::profile::fsexports:
+# home:
+#  path: '/users'
+#  nfsexportoptions: rw,no_root_squash,no_subtree_check,sync
+# service:
+#  path: '/opt/service'
+#  nfsexportoptions: ro,no_root_squash,no_subtree_check,sync
+alces_stack::profile::lustreclient_target: "10.199.0.12@tcp0:10.199.0.11@tcp0:/lustre"

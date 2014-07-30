@@ -1,0 +1,88 @@
+---
+classes:
+ - 'alces_stack::site_specific'
+alces_stack::clustername: 'test1'
+alces_stack::masters: 
+ - 'headnode1'
+alces_stack::servicealias: 'service'
+alces_stack::storagealias: 'service'
+alces_stack::serviceip: '10.10.0.10'
+alces_stack::storageip: '10.10.0.10'
+alces_stack::hostbasedssh: false
+#DECARE HOST KEYS HERE IF USING HOSTBASED SSH LOGIN (ALL MACHINES MUST HAVE SAME HOST KEY) 
+#KEYS CAN BE UNIQUE AND DECLARED FURTHER DOWN THE HIERARCHY IF USING STANDARD SSH HOST KEYS
+#alces_stack::rsa_key: |
+#  -----BEGIN RSA PRIVATE KEY-----
+#  MIIEoQIBAAKCAQEAxq9lkXql+W9EAj85UJuWU6jUulpjRm12r4Ad9JphdvV2OThW
+#  Y60KI6+PdY84Oa5xGCkM8UJ6QVjr5mfWQ1dEBJYHw0o4BBF1MsYqNAp0+Kb5x6+Z
+#  DEowl7N+q6aBG7aIpMXNHL1CpBliG1FMAPmv6g7eAN+eLWw2De5u/lCWrYbzAkMt
+#  YdHaV4wKsCci2tAQoVfaQfPwM7X7eMtkiUHwMLcTEx7pFFwSnhEYMo4cG8Vr6IqK
+#  IJIr2IrDFqeQwlMPCq77vV18FInAziRIyFT32nLpavPMECaTG4Q9NO9fTkahp+ti
+#  QWtZNsLRS1mpUjcYP9JjN5UV6QMXRyRkOAnBdQIBIwKCAQBmLlF+BI/fXcs0WweI
+#  iofTQOJud6DFIlpLoPl2e0gRSwmZxTO+O7wSWknHbjosSxWXZZGgpdh5YO5ZPLdV
+#  1Ruqlk0imzLAQ34aHMU/VdXBtPV8o3NIJieeeZGaGx3TvPXRFUTqNXK6yznE5/sz
+#  s5xMfKyv/fmTs/6K0mT30ayTwNbDyJfupfDFSyoNm1O5VSGs5nffluwM0qTEyAVJ
+#  NYcVtTYBvTCea5xMpcJRT4VUp34qFBmXQ/a6nYjKZ3dpGVmzxpt4KO7dYmifz9pM
+#  LrBJ1xhVQwCPSPqxscmfJH9nYQdxESJmAAiHE5C3ZT0vH9axuWVsSTwlhM8kxVdv
+#  2tCLAoGBAOcDGpr7s9TD4KsIvYUfAitcCNrnUe4hpSQjpnEZXrMiNm35KGG6ANPD
+#  buGuWJvQvk9pu3MnW0kLEgfW7JV8djyRRC4MiqYvoEzIzFBOw6taPF/6A4Ud/W/p
+#  ycOSz2HYyjWPjpUFRYY7p3JAJcyH5MWAfkqAPQaeovBTtcR8Eg4VAoGBANwtIodr
+#  aZT3mTiM9Hrv4UA8OYgLblOHWs/Wg5PTUH2AvLwWlOG0igC3X+dX4f0J+lHXqAGo
+#  a59/DYaZuOhrR/li9thHLej9jaiVtZceUvW3vvaSQ1QUcJERGap65z6eP8EuSbUE
+#  CVCfH/6KJ+XSPxTXiAxkyaiPpQXzC1lGBx3hAoGBANnPuf/XYGmFfA75nL9XwDeC
+#  qUNsYzD7Jq0Lq481LWcRoQiadogHJVnyx6GVwUJ0W6n1+eGaIt54JvFy3xCZ69K0
+#  2eJGVtc0OA3h5TXGmzspMZxSIJN0DDZRdRd7ytiZM67Xz5PRxTVrcf4B98DX5lPQ
+#  7Bpbp0DBdQ56z/PFcBvnAoGAOJ3kTrU4aCJpOm1jcBHMNRbM9xjh2vbrd0XKEBHE
+#  PYeA/SpgzFL+6j3INCyKkYY5DbsckrZHj2nQRy7XxryAONBOGltyNJj4im+juSUO
+#  BKuXgTuNp+f/sEY5zMCEmxK/79iz3hb7FLs0HOGyfOzrpkYNCoBRHLc5ECiN48GM
+#  zSsCgYBjcdqUbvKteCgNihjvaTummDEtPeP0TJqTyGoUNlKAdG9yaZshZ9875qSj
+#  WXUps/b6R7I6qdIAr9rbV+a/Ak7hEUe7E2dOrOGycQe3/mQMGHhXmXhdvSgy/YYw
+#  hwGmlOpx4rSR+qhP+s382ROPmavsM6XR7CjTs5s6jAMw7qefHA==
+#  -----END RSA PRIVATE KEY-----
+#alces_stack::rsa_pubkey: |
+#  ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAxq9lkXql+W9EAj85UJuWU6jUulpjRm12r4Ad9JphdvV2OThWY60KI6+PdY84Oa5xGCkM8UJ6QVjr5mfWQ1dEBJYHw0o4BBF1MsYqNAp0+Kb5x6+ZDEowl7N+q6aBG7aIpMXNHL1CpBliG1FMAPmv6g7eAN+eLWw2De5u/lCWrYbzAkMtYdHaV4wKsCci2tAQoVfaQfPwM7X7eMtkiUHwMLcTEx7pFFwSnhEYMo4cG8Vr6IqKIJIr2IrDFqeQwlMPCq77vV18FInAziRIyFT32nLpavPMECaTG4Q9NO9fTkahp+tiQWtZNsLRS1mpUjcYP9JjN5UV6QMXRyRkOAnBdQ== 
+
+#DEFINE root keys to force root ssh key to be same on all nodes
+alces_stack::root_rsa_key: |
+  -----BEGIN RSA PRIVATE KEY-----
+  MIIEowIBAAKCAQEA30lYyZfVcAkuXn2Eo0n8HvcRqO+DFjTAX1Gv6BoO1QTI41M6
+  5g0kN1zIrR5Y7QQ3v1nEZZrIinS+mpOJ1F+f1TvQVBsiTT85hAbpNLFxb+5I+GBw
+  0zbXStW54+39fjAAUcL8sEisSundKFkzUvNWiZCD0My72Km8frVsYEc5hauyE8NL
+  W7VwPXMbFC0TTl4bVbmVYHJrELYkdumE87Y8dIER2d438h3MMhfQlc/PQl2bJr8i
+  jgdUcOeSqXrcKgUNC301IObVcAu/D4Y3Y2+6R9ALhFMQFheHS4r2zEReIM0JYoz+
+  ux45sR6TWXB5cwstJCxAdxg2x8nmLn6eCeEJowIBIwKCAQEAxcSfGPQyEsZNpCYH
+  w9PQrbZC13UNtJUfal5LWIwbw/zscZLcZVwYw1IuFa0qMQO8WQZdfpBoeqHqpirn
+  yrsYiaoBqZRgNcpI4qcJEWn2wjlz1K0wuxNQ+SOzRjkw+rzNFTesnCMcQlobp2Ty
+  8bL04D4rm64FdsI5PQcW2O6gqZZrFRU1UYAniKoZv/TTB0vgNkgUqE8fk0un/yRF
+  lWGaC8OGLF7H4gW2SHgJWWuYIigO1OOqlXpuLQ5WIzgdC2C8rJqwIpqW5oxm6+kq
+  KhlAGHybEom7EQo38Wz7YKRP/c+RfE/AhQTtyA7sPrWpOmTXUEDnqHEcEPWqt4q8
+  n8eL6wKBgQD1jOsejyBvnPRIBsPUGY72ZqZQwqQsLeKHNXj19cCS7F9qVTQ9eoto
+  nWV246IZF2wLM2Op2/wGM20ZEE48yl3r7pRTh6dKhP4Fm0ZQgkmzGdWwgyQ66Flf
+  vJ9k00xno2k3EW08bxUo/yie+WECFFKF+Sxd1f4bnODzXUFAhbx60wKBgQDoyeFD
+  LoAu1KYATXXdVdyTJWcMQuBEhtkI30/dVU2pBzykrWhCFUngGZYuG6v541j7E4O4
+  Gctmfji9ge1Exmt1Ykq/5crQB8oLcigioRoJItkGwvZtVE+FTMtdYpEHiB6hq/+F
+  1uJ32Fi4GUJdd6GjjlOCPcOxKEcyEofz6IVT8QKBgQDnhN2vGTvW8xI1SDT7Lgpz
+  StdTdbC78L+kDdhy4GUc0Dy0trw59zL8PKF+uV5SLAbIu2yY1rpsPx24i7d7JTP7
+  tQ+B9O4wUYHKxZoRZOZnCbrZoDgaSMlLozczLZ/PbjAAuKjSlJ7sI8c2zd8fN7uF
+  ocq+37USuHxTLApSxzyuUQKBgQDbfIPu4rNfWshmr28hJRHMkPrCavC1o7awmAl4
+  6gdk2vAI+0ULG2LpPLIreS0ezwrA1+KXo0q/uNZpiSGJ/Oj5pdFzGn1lDqiOcvKk
+  TsDGyRXEi++o6RfG02CogYFtgFdlO8UJKbD0p2mXosmLU4nGGHqfXs5z1YT0smLt
+  SPK82wKBgFuxLp6hfuXzLZw2TmOXB8LBuyM71cRW1zttc40r6lZVtKVpoSqMMSpo
+  Cu934xbErjMqidhmZx/R9cg/MMD5zLzAKXukw+EDBOBDbPLYJObf/H+p9a0jukM5
+  60gB25Oa/RVGSFHoqv74VAmF53xdZBkwki6nv4Bi7thxfUyTZbwK
+  -----END RSA PRIVATE KEY-----
+alces_stack::root_rsa_pubkey: |
+  ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEA30lYyZfVcAkuXn2Eo0n8HvcRqO+DFjTAX1Gv6BoO1QTI41M65g0kN1zIrR5Y7QQ3v1nEZZrIinS+mpOJ1F+f1TvQVBsiTT85hAbpNLFxb+5I+GBw0zbXStW54+39fjAAUcL8sEisSundKFkzUvNWiZCD0My72Km8frVsYEc5hauyE8NLW7VwPXMbFC0TTl4bVbmVYHJrELYkdumE87Y8dIER2d438h3MMhfQlc/PQl2bJr8ijgdUcOeSqXrcKgUNC301IObVcAu/D4Y3Y2+6R9ALhFMQFheHS4r2zEReIM0JYoz+ux45sR6TWXB5cwstJCxAdxg2x8nmLn6eCeEJow== Alces HPC Host Key
+
+alces_stack::ldap_uri: 'ldap://10.10.0.1/'
+alces_stack::ldap_base: 'dc=prv,dc=builder,dc=cluster'
+alces_stack::adserver: '172.16.228.1'
+alces_stack::addomain: 'int.lotusracing.my'
+#which scheduler to default? (eg alces-gridscheduler, alces-torque)
+alces_stack::schedulertype: 'alces-gridscheduler'
+#alces_stack::controlscheduler: false
+alces_stack::lustre: true
+alces_stack::root_passwd_md5: '$1$PpsVZ1$d8JehANo2rR0dRSZLsJQz/'
+#Enable openvpn based secure/client VPN network support
+alces_stack::openvpn: true
+alces_stack::hostfiledns: false

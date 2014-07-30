@@ -1,0 +1,57 @@
+---
+alces_stack::networkinterfaces:
+ - eth0
+ - eth1
+ - eth2
+ - bmc
+# - brmanagement
+#alces_stack::networkrole_eth0: brprivate
+#alces_stack::networkrole_bmc: bmc
+#alces_stack::networkrole_ib0: brinfiniband
+#alces_stack::networkrole_eth1: brmanagement
+alces_stack::networkrole_eth0: private
+alces_stack::networkrole_eth1: management
+alces_stack::networkrole_eth2: public
+#alces_stack::networkrole_brinfiniband: infiniband
+alces_stack::networkrole_bmc: bmc
+#alces_stack::networkrole_ib0: infiniband
+#alces_stack::networkrole_eth1: management
+#alces_stack::networkrole_eth2: public
+alces_stack::defaultgateway_role: public
+alces_stack::lustre: false
+alces_stack::infiniband: false
+alcesbase::serialconsoledevice: "/dev/ttyS1"
+alcesbase::serialconsolebaud: "115200"
+alces_stack::profile::ha: false
+alces_stack::schedulerrole: master
+# BONDS
+#alces_stack::bonds:
+# - bond0
+# Options for bond0
+#alces_stack::bond0_type: 1
+#alces_stack::bond0_options: 'primary=em3'
+#alces_stack::gangliaport: 8649
+# BRIDGES
+#alces_stack::bridges:
+# - brpublic
+# - brprivate
+# - brmanagement
+# - brinfinibabd
+#Dealt with by HA
+#alces_stack::fsexports:
+# home:
+#  path: '/users'
+#  nfsexportoptions: rw,no_root_squash,no_subtree_check,sync
+# service:
+#  path: '/opt/service'
+#  nfsexportoptions: ro,no_root_squash,no_subtree_check,sync
+#Don't import VM exports on a VM host!
+#alces_stack::profile::fsimports:
+# 'service:/opt/alces':
+#   target: '/opt/alces'
+#   options: intr,rsize=32768,wsize=32768,_netdev,soft,timeo=10,bg
+# 'service:/opt/gridware':
+#   target: '/opt/gridware'
+#   options: intr,rsize=32768,wsize=32768,_netdev,soft,timeo=10,bg
+#alces_stack::profile::lustrenetworks: o2ib0(ib0)
+#alces_stack::profile::lustreclient_target: '10.12.0.12@o2ib0:10.12.0.11@o2ib0:/lustre'

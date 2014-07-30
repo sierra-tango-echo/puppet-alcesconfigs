@@ -1,0 +1,13 @@
+---
+alcesservices::nfsexports:
+ clusterware:
+  path: '/opt/alces'
+  nfsexportoptions: ro,no_root_squash,no_subtree_check,async
+ gridware:
+  path: '/opt/gridware'
+  nfsexportoptions: rw,no_root_squash,no_subtree_check,sync
+ diskless:
+  path: '/var/lib/oneSIS/images/'
+  nfsexportoptions: ro,no_root_squash,no_subtree_check,async
+  parents:
+   - /var/lib/oneSIS

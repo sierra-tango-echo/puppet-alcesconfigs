@@ -1,0 +1,47 @@
+---
+alcesbase::clustername: 'sfn'
+alcesbase::masteralias: 'service'
+alcesbase::masterip: '10.10.0.1'
+alcesservices::root_rsa_key: |
+  -----BEGIN RSA PRIVATE KEY-----
+  MIIEowIBAAKCAQEA6AOctqitf/xTsZEAiZXiNM6+BWH4FzKcKF2ymebFrSQALYFq
+  NvKf/Yt+BgM7hyL4MXvtPnLDi+FYdAk+5zNLR7CKKMHF+jN1V7o/q6Z+2ewKOogi
+  TeOnE0r1ApFQTZ3FswNhsvC8vAgv9p+gSy2xMM3/BRNOlTBBOEMuCq/ANJX2jrut
+  615jd2DUjjEB6gIqDCmczGSEcPKj82lQfqXVRYkUyY3wF72xD+iEtK65BckARNmc
+  BjeLfsykM5dC38VsYvMAebWXbGzGvsrsihd/xYgYcMHs+FjR/H1mPzkCsJzsnR00
+  bhynlqQqSkIT02IvdAXKmlwBANl5/OxUC6GVgQIBIwKCAQEAzX+KzatX18I7gAQW
+  azucd+pQiGy3Kn1Ie4Ywea8kHQKhElyuiHB/E8SxcwotaRBYK9Qp5tqtMsBHB7Bq
+  6gjcRs+QT/wVwFl2j4e0vJrIIBo08gOMGRoXo1+lzxL9+5pepd5seesq0m2m0x+r
+  O0W6MoqRauU2+Sq9bFjCYTyUS9OX/T04mSkGJ01umyoZ9rwClVTv72/w1Opaz14r
+  61C09r+q7gsD/cNWahowKPXZglQ8cckFoVCfWyfIYlm0fdSTksICsMSoEjKN9o4j
+  Zz1FjS8aPJK6memV2luxX9NWk42i4W6dxi7+U5Y/Qime9SQtbGapyMSHdxecANco
+  JVVPbwKBgQD+PM+iE2qb79rktpolLnvAc0B4Yapkt3UXV8zLEd4GyWfhYn4xFT4x
+  KUvtuF40cN8ssy/t0atCgnFu5/VecmvJwDxvgs2jL3qmHUS8HkV2WzuPBe7DC1aR
+  /DSw0vBaUJzZ2/AX3G5k+0x11yXxiZ+LMPUwaCZV1wRcWNkGwsYjKwKBgQDpn1ya
+  ZNX6Y2hR7pjgc2fSCRWh6MggVX02mLZT1rcCK7xqKME+oe1HoF39g78TIszJIbY0
+  PFqMzz7O7RuUhHHjPxVUHtAdtMmQ3bxri+eyoZt8T7njolVdAX4Wc7Tjh9wIRsj/
+  FQWXE64SMKsT+y5w+jmYcJGWWQ0KaVHuaQeEAwKBgQDEIEhnFkrtUqGL3VJXMny5
+  CHOQENPnS7IZUlwnoBGtdsx6qxDkCRK4Nczb9KBxmOatdEmLkx229unKla6n8d4f
+  SydOtVzOV9Okt34quEQ2u2h1pX2sZ9URiAtj1eydcWMOdndi3T839Q8ZE6+OcXsT
+  msvGQbcsRsjZhl5HC0hkRQKBgHF5Sjxc3PX1xPSYdiPgSF6z9JB4YTRGx8oPqQQm
+  diWgNvG8Bhcbc0AMEGUxXM7Hwo2UCAq+OpwqJdI4pv7+gHWw7Ro62h0OqwvZaiWb
+  ua6JAmDzhiy8j9y3lQOXSTtQnhKmCdr7lQA8wkNZd6qekuZq6MZij9tP0yJQaZ+v
+  W2wBAoGBAN72xcgtSvilz5vsJ3MEO5GoJZ8ygZgCk/6Vbs/Y8sz4n7bJ6HJHZWEa
+  KfvZwDHY2a+sGmZlmY/rN4TTGhHJuBfy1+Oki4Rd2AYSjg2eaep9K83zKodOfWJO
+  34pH7fG2zGf1COfss3CszmCudw/rJSYOcVDWVCp8CYM/D+4d7rCV
+  -----END RSA PRIVATE KEY-----
+alcesservices::root_rsa_pubkey: |
+  ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEA6AOctqitf/xTsZEAiZXiNM6+BWH4FzKcKF2ymebFrSQALYFqNvKf/Yt+BgM7hyL4MXvtPnLDi+FYdAk+5zNLR7CKKMHF+jN1V7o/q6Z+2ewKOogiTeOnE0r1ApFQTZ3FswNhsvC8vAgv9p+gSy2xMM3/BRNOlTBBOEMuCq/ANJX2jrut615jd2DUjjEB6gIqDCmczGSEcPKj82lQfqXVRYkUyY3wF72xD+iEtK65BckARNmcBjeLfsykM5dC38VsYvMAebWXbGzGvsrsihd/xYgYcMHs+FjR/H1mPzkCsJzsnR00bhynlqQqSkIT02IvdAXKmlwBANl5/OxUC6GVgQ== 
+alcesservices::userauth::nis: true
+alcesservices::userauth::ldap: false
+alcesservices::userauth::kerberos: false
+alcesservices::userauth::ldap_uri: 'ldap://10.10.0.1/'
+alcesservices::userauth::ldap_base: 'dc=prv,dc=sfn,dc=cluster'
+alcesservices::userauth::adserver: '127.0.0.1'
+alcesservices::userauth::addomain: 'ad.site.com'
+#which scheduler to default? (eg alces-gridscheduler, alces-torque)
+alceshpc::schedulertype: 'alces-gridscheduler'
+alceshpc::lustre: false
+alceshpc::lustrenetworks: o2ib0(ib0)
+alceshpc::lustreclient_target: '10.12.0.12@o2ib0:10.12.0.11@o2ib0:/lustre'
+alcesservices::root_passwd_md5: '$1$nHy0k1$8Q2s8mqNWi9t9VUn6qDWf.'
