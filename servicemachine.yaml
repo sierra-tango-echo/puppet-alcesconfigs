@@ -3,10 +3,10 @@ alcesnetwork::networkinterfaces:
  - eth0
  - eth1
  - eth2
- - bmc
+# - bmc
 alcesnetwork::primarynetwork: private
 alcesnetwork::networkrole_eth0: private
-alcesnetwork::networkrole_bmc: bmc
+#alcesnetwork::networkrole_bmc: bmc
 #alcesnetwork::networkrole_ib0: infiniband
 alcesnetwork::networkrole_eth1: management
 alcesnetwork::networkrole_eth2: public
