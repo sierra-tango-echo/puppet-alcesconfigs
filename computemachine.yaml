@@ -1,31 +1,10 @@
 ---
-alcesnetwork::networkinterfaces:
- - em1
- - ib0
- - bmc
-alcesnetwork::networkrole_bmc: bmc
-alces_stack::networkrole_ib0: infiniband
-#alcesnetwork::private_dhcp: true
-alcesnetwork::networkrole_em1: private
 alcesbase::serialconsoledevice: "/dev/ttyS1"
 alcesbase::serialconsolebaud: "115200"
-alcesnetwork::infiniband: false
-alcesnetwork::melanox: false
-alcesnetwork::qlogic: false
 alcesbase::nvidia: false
-#alcesnetwork::bonds:
-# - bond0
-#alcesnetwork::bond0_type: 1
-#alcesnetwork::bond0_options: 'miimon=80 primary=p2p1'
 alcesservices::nfsimports:
  'headnode:/users':
    target: '/users'
-   options: intr,rsize=32768,wsize=32768,_netdev
- 'service:/opt/alces':
-   target: '/opt/alces'
-   options: intr,rsize=32768,wsize=32768,_netdev
- 'service:/opt/gridware':
-   target: '/opt/gridware'
    options: intr,rsize=32768,wsize=32768,_netdev
  'headnode:/opt/service':
    target: '/opt/service'
