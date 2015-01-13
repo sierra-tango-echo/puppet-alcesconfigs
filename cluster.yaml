@@ -1,5 +1,5 @@
 ---
-alcesbase::clustername: 'democlient'
+alcesbase::clustername: 'unconfigured'
 #which scheduler to default? (eg alces-gridscheduler, alces-torque)
 alceshpc::schedulertype: 'alces-gridscheduler'
 alceshpc::lustre: false

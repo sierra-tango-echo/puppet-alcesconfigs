@@ -29,12 +29,6 @@ alces_stack::profile::fsimports:
  'headnode:/opt/apps':
    target: '/opt/apps'
    options: intr,rsize=32768,wsize=32768,_netdev
- 'service:/opt/alces':
-   target: '/opt/alces'
-   options: intr,rsize=32768,wsize=32768,_netdev
- 'service:/opt/gridware':
-   target: '/opt/gridware'
-   options: intr,rsize=32768,wsize=32768,_netdev
  'headnode:/opt/service':
    target: '/opt/service'
    options: intr,rsize=32768,wsize=32768,_netdev
