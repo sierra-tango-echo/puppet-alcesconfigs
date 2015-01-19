@@ -12,3 +12,9 @@ alcesservices::nfsimports:
  'headnode:/opt/apps':
    target: '/opt/apps'
    options: intr,rsize=32768,wsize=32768,_netdev
+ 'headnode:/opt/gridware':
+   target: '/opt/gridware'
+   options: intr,rsize=32768,wsize=32768,_netdev
+ 'headnode:/opt/clusterware':
+   target: '/opt/clusterware'
+   options: intr,rsize=32768,wsize=32768,_netdev

@@ -17,7 +17,15 @@ alcesservices::nfsexports:
  apps:
   path: '/opt/apps'
   nfsexportoptions: ro,no_root_squash,no_subtree_check,sync
-  interface: brprivate
+  interface: eth0
+ gridware:
+  path: '/opt/gridware'
+  nfsexportoptions: ro,no_root_squash,no_subtree_check,sync
+  interface: eth0
+ clusterware:
+  path: '/opt/clusterware'
+  nfsexportoptions: ro,no_root_squash,no_subtree_check,sync
+  interface: eth0
 alcesservices::nfsimports:
 # 'service:/opt/gridware':
 #   target: '/opt/gridware'
