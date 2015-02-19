@@ -1,8 +1,7 @@
 ---
-alceshpc::lustrenetworks: o2ib0(ib0),tcp0(brprivate)
+alceshpc::lustrenetworks: tcp0(eth0)
+alceshpc::lustreclient_target: '10.110.1.22@tcp0:10.110.1.21@tcp0:/lustre'
 alceshpc::lustre: true
-alcesbase::serialconsoledevice: "/dev/ttyS1"
-alcesbase::serialconsolebaud: "115200"
 alcesbase::ha: false
 alceshpc::schedulerrole: master
 alcesservices::nfsexports:

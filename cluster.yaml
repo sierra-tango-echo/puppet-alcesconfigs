@@ -2,6 +2,6 @@
 alcesbase::clustername: 'unconfigured'
 #which scheduler to default? (eg alces-gridscheduler, alces-torque)
 alceshpc::schedulertype: 'alces-gridscheduler'
-alceshpc::lustre: false
+alceshpc::lustre: true
 alceshpc::lustrenetworks: o2ib0(ib0)
-alceshpc::lustreclient_target: '10.12.0.12@o2ib0:10.12.0.11@o2ib0:/lustre'
+alceshpc::lustreclient_target: '10.112.1.22@o2ib0:10.112.1.21@o2ib0:/lustre'
