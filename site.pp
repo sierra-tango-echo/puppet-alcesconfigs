@@ -34,7 +34,12 @@ node /login(\d)*/ {
   }
 }
 node /oss(\d)*/ {
-  class { 'alcesbase::profile::storage':
+  class { 'alcesbase::profile::compute':
+    role=>'slave',
+  }
+}
+node /backup(\d)*/ {
+  class { 'alcesbase::profile::compute':
     role=>'slave',
   }
 }

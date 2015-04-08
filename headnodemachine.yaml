@@ -1,7 +1,6 @@
 ---
 alceshpc::lustrenetworks: tcp0(eth0)
 alceshpc::lustreclient_target: '10.110.1.22@tcp0:10.110.1.21@tcp0:/lustre'
-alceshpc::lustre: true
 alcesbase::ha: false
 alceshpc::schedulerrole: master
 alcesservices::nfsexports:
