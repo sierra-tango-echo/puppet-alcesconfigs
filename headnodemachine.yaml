@@ -1,23 +1,9 @@
 ---
-alceshpc::lustrenetworks: tcp0(eth0)
-alceshpc::lustreclient_target: '10.110.1.22@tcp0:10.110.1.21@tcp0:/lustre'
 alcesbase::ha: false
 alceshpc::schedulerrole: master
 alcesservices::nfsexports:
- home:
-  path: '/users'
-  nfsexportoptions: rw,no_root_squash,no_subtree_check,sync
-  interface: eth0
  service:
   path: '/opt/service'
-  nfsexportoptions: ro,no_root_squash,no_subtree_check,sync
-  interface: eth0
- apps:
-  path: '/opt/apps'
-  nfsexportoptions: ro,no_root_squash,no_subtree_check,sync
-  interface: eth0
- gridware:
-  path: '/opt/gridware'
   nfsexportoptions: ro,no_root_squash,no_subtree_check,sync
   interface: eth0
  clusterware:
@@ -25,6 +11,12 @@ alcesservices::nfsexports:
   nfsexportoptions: ro,no_root_squash,no_subtree_check,sync
   interface: eth0
 alcesservices::nfsimports:
-# 'service:/opt/gridware':
-#   target: '/opt/gridware'
-#   options: intr,rsize=32768,wsize=32768,_netdev,soft,timeo=10,bg
+ 'master1:/exports/users':
+   target: '/users'
+   options: intr,rsize=32768,wsize=32768,_netdev
+ 'master1:/exports/apps':
+   target: '/opt/apps'
+   options: intr,rsize=32768,wsize=32768,_netdev
+ 'master1:/exports/gridware':
+   target: '/opt/gridware'
+   options: intr,rsize=32768,wsize=32768,_netdev

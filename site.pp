@@ -33,12 +33,17 @@ node /login(\d)*/ {
     role=>'slave',
   }
 }
-node /oss(\d)*/ {
+node /slurm(\d)*/ {
+  class { 'alcesbase::profile::login':
+    role=>'slave',
+  }
+}
+node /block(\d)*/ {
   class { 'alcesbase::profile::compute':
     role=>'slave',
   }
 }
-node /backup(\d)*/ {
+node /gpu(\d)*/ {
   class { 'alcesbase::profile::compute':
     role=>'slave',
   }

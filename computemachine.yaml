@@ -3,18 +3,18 @@ alcesbase::nvidia: false
 alcesbase::vgl: false
 
 alcesservices::nfsimports:
- 'headnode1:/users':
+ 'headnode1:/opt/clusterware':
+   target: '/opt/clusterware'
+   options: intr,rsize=32768,wsize=32768,_netdev
+ 'master1:/exports/users':
    target: '/users'
+   options: intr,rsize=32768,wsize=32768,_netdev
+ 'master1:/exports/apps':
+   target: '/opt/apps'
+   options: intr,rsize=32768,wsize=32768,_netdev
+ 'master1:/exports/gridware':
+   target: '/opt/gridware'
    options: intr,rsize=32768,wsize=32768,_netdev
  'headnode1:/opt/service':
    target: '/opt/service'
-   options: intr,rsize=32768,wsize=32768,_netdev
- 'headnode1:/opt/apps':
-   target: '/opt/apps'
-   options: intr,rsize=32768,wsize=32768,_netdev
- 'headnode1:/opt/gridware':
-   target: '/opt/gridware'
-   options: intr,rsize=32768,wsize=32768,_netdev
- 'headnode1:/opt/clusterware':
-   target: '/opt/clusterware'
    options: intr,rsize=32768,wsize=32768,_netdev

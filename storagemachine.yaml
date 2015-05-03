@@ -1,3 +1,4 @@
 ---
 alcesbase::serialconsoledevice: "/dev/ttyS1"
 alcesbase::serialconsolebaud: "115200"
+alceshpc::lustrenetworks: o2ib0(ib0)
